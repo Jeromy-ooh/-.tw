@@ -1,1 +1,38 @@
-葉
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>葉</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #textDisplay {
+            font-size: 24px;
+            margin: 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>文字顯示範例</h1>
+    <div id="textDisplay">預設文字</div>
+    <button onclick="changeText()">改變文字</button>
+    
+    <script>
+        function changeText() {
+            const texts = ["你好！", "歡迎光臨", "Hello, World!", "今天天氣很好", "程式設計好好玩"];
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById("textDisplay").innerText = texts[randomIndex];
+        }
+    </script>
+</body>
+</html>
+
